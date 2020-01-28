@@ -1,0 +1,33 @@
+﻿@using System.Web.UI.WebControls
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <title>Index</title>
+    <style>
+        .btn a { color: white; text-decoration: none}
+        body { background-color: #F1F1F1}
+    </style>
+</head>
+<body>
+<div class="text-center">
+    <h1>Hello World</h1>
+    <h2>@ViewBag.Time.ToString()</h2>
+    <h3>Welcome to the party</h3>
+    <p>
+        this is the link to the registration form<br/>
+        <div class="btn btn-success">
+            @Html.ActionLink("Invitation form", "RsvpForm")
+        </div>
+    </p>
+</div>
+</body>
+</html>
